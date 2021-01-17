@@ -18,8 +18,6 @@ class CreatePortfolioTable extends Migration
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('image')->nullable();
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIME'));
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIME'));
         });
     }
 
