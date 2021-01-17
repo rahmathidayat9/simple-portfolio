@@ -10,18 +10,18 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ secure_asset('templates/frontend/devfolio') }}/assets/img/favicon.png" rel="icon">
-  <link href="{{ secure_asset('templates/frontend/devfolio') }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset('templates/frontend/devfolio') }}/assets/img/favicon.png" rel="icon">
+  <link href="{{ asset('templates/frontend/devfolio') }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
-  <link href="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="{{ asset('templates/frontend/devfolio') }}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ asset('templates/frontend/devfolio') }}/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{{ asset('templates/frontend/devfolio') }}/assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="{{ asset('templates/frontend/devfolio') }}/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="{{ asset('templates/frontend/devfolio') }}/assets/vendor/venobox/venobox.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{{ secure_asset('templates/frontend/devfolio') }}/assets/css/style.css" rel="stylesheet">
+  <link href="{{ asset('templates/frontend/devfolio') }}/assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: DevFolio - v2.4.0
@@ -59,7 +59,7 @@
   </nav>
 
   <!-- ======= Intro Section ======= -->
-  <div id="home" class="intro route bg-image" style="background-image: url({{ secure_asset('storage/uploads/image/header/'.$getHeader->image ?? 'gambar' ) }}">
+  <div id="home" class="intro route bg-image" style="background-image: url({{ asset('storage/uploads/image/header/'.$getHeader->image ?? 'gambar' ) }}">
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
@@ -86,7 +86,7 @@
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
-                        <img src="{{ secure_asset('storage/uploads/image/about/'.$getAbout->image ?? 'gambar' ) }}" style="height: 200px; object-fit: cover; object-position: center;" class="img-fluid rounded b-shadow-a" alt="">
+                        <img src="{{ asset('storage/uploads/image/about/'.$getAbout->image ?? 'gambar' ) }}" style="height: 200px; object-fit: cover; object-position: center;" class="img-fluid rounded b-shadow-a" alt="">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
@@ -149,9 +149,9 @@
           @foreach($getPortfolio as $portfolio)
           <div class="col-md-4">
             <div class="work-box">
-              <a href="{{ secure_asset('storage/uploads/image/portfolio/'.$portfolio->image) }}" data-gall="portfolioGallery" class="venobox">
+              <a href="{{ asset('storage/uploads/image/portfolio/'.$portfolio->image) }}" data-gall="portfolioGallery" class="venobox">
                 <div class="work-img">
-                  <img src="{{ secure_asset('storage/uploads/image/portfolio/'.$portfolio->image) }}" alt="" class="img-fluid">
+                  <img src="{{ asset('storage/uploads/image/portfolio/'.$portfolio->image) }}" alt="" class="img-fluid">
                 </div>
               </a>
               <div class="work-content">
@@ -239,18 +239,18 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/php-email-form/validate.js"></script>
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/counterup/jquery.counterup.min.js"></script>
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/typed.js/typed.min.js"></script>
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/vendor/php-email-form/validate.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/vendor/counterup/jquery.counterup.min.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/vendor/typed.js/typed.min.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/vendor/venobox/venobox.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{ secure_asset('templates/frontend/devfolio') }}/assets/js/main.js"></script>
+  <script src="{{ asset('templates/frontend/devfolio') }}/assets/js/main.js"></script>
 
 </body>
 
