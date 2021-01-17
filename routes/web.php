@@ -2,12 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Admin Namespace
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\LayoutController;
+//Home Namespace
+use App\Http\Controllers\Home\HomeController;
 
 //Auth Namespace
 use App\Http\Controllers\Auth\LoginController;
+
+//Admin Namespace
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\LayoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +23,10 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::view('/','home.index');
-Route::view('/','home.index')->name('home');
+Route::namespace('Home')->group(function(){
+	Route::get('/',[HomeController::class,'index']);
+	Route::get('/',[HomeController::class,'index'])->name('home');
+});
 
 Route::namespace('Auth')->group(function(){
 
@@ -36,9 +41,16 @@ Route::namespace('Auth')->group(function(){
 
 Route::middleware(['auth'])->namespace('Admin')->group(function(){
 	Route::get('/admin',[AdminController::class,'index'])->name('admin');
+	Route::get('/admin/profile',[AdminController::class,'profile'])->name('admin.profile');
+	Route::patch('/admin/profile/update/{id}',[AdminController::class,'update'])->name('admin.profile.update');
+
+	//Layout
 	Route::get('admin/layout/header',[LayoutController::class,'header'])->name('layout.header');
+	Route::post('admin/layout/setheader',[LayoutController::class,'setHeader'])->name('layout.setheader');
 	Route::get('admin/layout/about',[LayoutController::class,'about'])->name('layout.about');
+	Route::post('admin/layout/setabout',[LayoutController::class,'setAbout'])->name('layout.setabout');
 	Route::get('admin/layout/footer',[LayoutController::class,'footer'])->name('layout.footer');
+	Route::post('admin/layout/setfooter',[LayoutController::class,'setFooter'])->name('layout.setfooter');
 
 	//Crud Resource
 	Route::resource('/admin/user','UserController');

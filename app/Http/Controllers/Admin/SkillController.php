@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SkillRequest;
+use Illuminate\Http\Request;
 
 use App\Models\Skill;
 
@@ -20,7 +21,7 @@ class SkillController extends Controller
         return view('admin.skill.create');
     }
 
-    public function store(SkillRequest $request)
+    public function store(Request $request)
     {   
         foreach ($request->skills as $skill) {
             Skill::create([

@@ -17,10 +17,7 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
-
+    
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -55,6 +52,12 @@
                 <a class="collapse-item" href="{{ route('layout.footer') }}">Footer</a>
             </div>
         </div>
+    </li>
+
+    <li class="nav-item {{ Request::is('profile') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.profile') }}">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Profile</span></a>
     </li>
 
     <!-- Divider -->

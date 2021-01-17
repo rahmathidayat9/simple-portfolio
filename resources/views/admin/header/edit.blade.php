@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="down_text">Down Text</label>
-                <input required value="{{ $header->down_text }}" class="form-control @error('down_text') is-invalid @enderror" name="down_text" id="down_text" type="">
+                <input placeholder="example : Iam student,web developer,gamer" required value="{{ $header->down_text }}" class="form-control @error('down_text') is-invalid @enderror" name="down_text" id="down_text" type="">
                 @error('down_text')
                 <div class="invalid-feedback">
                     {{ $message }}
