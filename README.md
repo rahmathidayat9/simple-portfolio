@@ -9,6 +9,8 @@ MY-PFOLIO adalah aplikasi website portfolio dengan konten dinamis.
 
 ## Setup
 - buka direktori project di terminal anda.
+- ketikan command : cp .env.example .env (copy paste file .env.example)
+- buat database 
 
 Lalu ketik command dibawah ini
 - composer install
