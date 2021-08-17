@@ -4,9 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest as Request;
-
 use App\Models\User;
-
 use Hash;
 
 class UserController extends Controller
