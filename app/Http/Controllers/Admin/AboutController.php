@@ -5,11 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AboutRequest;
 use Illuminate\Http\Request;
-
 use File;
-
 use App\Models\About;
-
 use App\Http\Controllers\Admin\UploadController;
 
 class AboutController extends Controller
