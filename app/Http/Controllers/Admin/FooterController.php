@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FooterRequest as Request;
-
 use App\Models\Footer;
 
 class FooterController extends Controller
