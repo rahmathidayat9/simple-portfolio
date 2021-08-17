@@ -5,11 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\HeaderRequest;
 use Illuminate\Http\Request;
-
 use File;
-
 use App\Models\Header;
-
 use App\Http\Controllers\Admin\UploadController;
 
 class HeaderController extends Controller
