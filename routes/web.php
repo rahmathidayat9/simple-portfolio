@@ -1,14 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-//Home Namespace
 use App\Http\Controllers\Home\HomeController;
-
-//Auth Namespace
 use App\Http\Controllers\Auth\LoginController;
-
-//Admin Namespace
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\LayoutController;
 
@@ -43,7 +37,7 @@ Route::middleware(['auth'])->namespace('Admin')->group(function(){
 	Route::get('/admin',[AdminController::class,'index'])->name('admin');
 	Route::get('/admin/profile',[AdminController::class,'profile'])->name('admin.profile');
 	Route::patch('/admin/profile/update/{id}',[AdminController::class,'update'])->name('admin.profile.update');
-
+    
 	//Layout
 	Route::get('admin/layout/header',[LayoutController::class,'header'])->name('layout.header');
 	Route::post('admin/layout/setheader',[LayoutController::class,'setHeader'])->name('layout.setheader');
