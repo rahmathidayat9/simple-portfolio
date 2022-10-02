@@ -8,21 +8,17 @@ use App\Models\Home;
 
 class HomeController extends Controller
 {
-	protected $home;
-
-	public function __construct()
-	{
-		$this->home = new Home;
-	}
+    protected $home;
 
     public function index()
     {
-    	return view('home.index',[
-    		'getHeader' => $this->home->getHeader(),
-    		'getAbout' 	=> $this->home->getAbout(),
-    		'getFooter' => $this->home->getFooter(),
-    		'getSkill' 	=> $this->home->getSkill(),
-    		'getPortfolio' 	=> $this->home->getPortfolio(), 
-    	]);
+        $Home = new Home();
+        return view('home.index', [
+            'getHeader' => $Home->getHeader(),
+            'getAbout'     => $Home->getAbout(),
+            'getFooter' => $Home->getFooter(),
+            'getSkill'     => $Home->getSkill(),
+            'getPortfolio'     => $Home->getPortfolio(),
+        ]);
     }
 }
