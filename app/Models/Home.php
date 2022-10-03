@@ -13,26 +13,26 @@ class Home extends Model
 
     public function getHeader()
     {
-    	return DB::table('headers')->where('is_active',1)->first();
+        return Header::where('is_active', 1)->first();
     }
 
     public function getAbout()
     {
-    	return DB::table('about')->where('is_active',1)->first();
+        return About::where('is_active', 1)->first();
     }
 
     public function getFooter()
     {
-    	return DB::table('footers')->where('is_active',1)->first();
+        return Footer::where('is_active', 1)->first();
     }
 
     public function getSkill()
     {
-    	return DB::table('skills')->get();
+        return Skill::get();
     }
 
     public function getPortfolio()
     {
-    	return DB::table('portfolio')->get();
+        return Portfolio::get();
     }
 }
