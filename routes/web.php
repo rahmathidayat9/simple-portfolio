@@ -23,14 +23,11 @@ Route::namespace('Home')->group(function(){
 });
 
 Route::namespace('Auth')->group(function(){
-
 	Route::view('/login','auth.login')->name('login')->middleware('guest');
 	Route::post('/login',[LoginController::class,'authenticate'])->name('login.post');
-
 	Route::post('/logout',function(){
 		return redirect()->to('/login')->with(Auth::logout());
 	});
-
 });
 
 Route::middleware(['auth'])->namespace('Admin')->group(function(){
